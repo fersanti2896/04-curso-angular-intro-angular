@@ -9,6 +9,6 @@ export class ListadoComponent{
   heroeBorrado: string = '';
 
   borrarHeroe(): void {
-    this.heroeBorrado = this.heroes.pop() || 'Sin Héroe';
+    this.heroeBorrado = this.heroes.pop() || '';
   }
 }
