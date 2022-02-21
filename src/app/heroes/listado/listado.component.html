@@ -1,9 +1,15 @@
 <h1>Listado de Héroes</h1>
 <!-- Direcitva *ngFor -->
 
-<div *ngIf="heroeBorrado">
+<!-- Si la primer condicion no se cumple, muestra el template -->
+<div *ngIf="heroeBorrado; else noBorrado">
     <h2>Héroe Borrado: <span>{{ heroeBorrado }}</span></h2>
 </div>
+
+<ng-template #noBorrado>
+    <h3>No has borrado nada!</h3>
+</ng-template>
+
 
 <button (click)="borrarHeroe()">
     Borrar Héroe
